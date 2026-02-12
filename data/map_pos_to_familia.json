@@ -1,0 +1,19 @@
+{
+  "Portero": "PORTERO",
+
+  "Lateral izquierdo": "LATERAL",
+  "Lateral derecho": "LATERAL",
+
+  "DFC Izquierdo": "DFC",
+  "DFC Derecho": "DFC",
+
+  "MC Contención": "MC",
+  "MC Box to Box": "MC",
+  "MC Ofensivo": "MC",
+
+  "Extremo Izquierdo": "EXTREMO",
+  "Extremo Derecho": "EXTREMO",
+
+  "Delantero": "DELANTERO",
+  "Segundo Delantero": "DELANTERO"
+}

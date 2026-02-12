@@ -1,0 +1,84 @@
+{
+  "PORTEROS": {
+    "keys": ["tabla_porteros"],
+    "percentil": {
+      "Percentil Score GK Portero": "GK_PORTERO",
+      "Percentil Score GK Atajador": "GK_ATAJADOR",
+      "Percentil Score GK Juego de Pies": "GK_PIES"
+    },
+    "cmap_cols": {
+      "(GK_PORTERO)": ["Blues", false],
+      "(GK_ATAJADOR)": ["Oranges", false],
+      "(GK_PIES)": ["Greens", true]
+    }
+  },
+  "LATERALES": {
+    "keys": ["tabla_laterales_izq", "tabla_laterales_der"],
+    "percentil": {
+      "Percentil Score Lateral Genérico": "LAT_GENERICO",
+      "Percentil Score Lateral Defensivo": "LAT_DEFENSIVO",
+      "Percentil Score Lateral Ofensivo": "LAT_OFENSIVO"
+    },
+    "cmap_cols": {
+      "(LAT_GENERICO)": ["Blues", false],
+      "(LAT_DEFENSIVO)": ["Reds", false],
+      "(LAT_OFENSIVO)": ["Greens", true]
+    }
+  },
+  "DFC": {
+    "keys": ["tabla_dfc_izq", "tabla_dfc_der"],
+    "percentil": {
+      "Percentil Score Central Genérico": "DFC_GENERICO",
+      "Percentil Score Central Defensivo": "DFC_DEFENSIVO",
+      "Percentil Score Central Combinativo": "DFC_COMBINATIVO"
+    },
+    "cmap_cols": {
+      "(DFC_GENERICO)": ["Blues", false],
+      "(DFC_DEFENSIVO)": ["Reds", false],
+      "(DFC_COMBINATIVO)": ["Greens", true]
+    }
+  },
+  "MC": {
+    "keys": ["tabla_mc_contencion", "tabla_mc_box", "tabla_mc_ofensivo"],
+    "percentil": {
+      "Percentil Score MC Genérico": "MC_GENERICO",
+      "Percentil Score MC Contención": "MC_CONTENCION",
+      "Percentil Score MC Ofensivo": "MC_OFENSIVO",
+      "Percentil Score MC Box-to-Box": "MC_B2B"
+    },
+    "cmap_cols": {
+      "(MC_GENERICO)": ["Blues", false],
+      "(MC_CONTENCION)": ["Reds", false],
+      "(MC_OFENSIVO)": ["Greens", false],
+      "(MC_B2B)": ["Purples", false]
+    }
+  },
+  "EXTREMOS": {
+    "keys": ["tabla_extremos_izq", "tabla_extremos_der"],
+    "percentil": {
+      "Percentil Score Extremo Genérico": "EXT_GENERICO",
+      "Percentil Score Extremo Wide Out": "EXT_WIDEOUT",
+      "Percentil Score Extremo Incorporación": "EXT_INCORPORACION",
+      "Percentil Score Extremo Combinativo": "EXT_COMBINATIVO"
+    },
+    "cmap_cols": {
+      "(EXT_GENERICO)": ["Blues", false],
+      "(EXT_WIDEOUT)": ["Greens", false],
+      "(EXT_INCORPORACION)": ["Reds", false],
+      "(EXT_COMBINATIVO)": ["Purples", false]
+    }
+  },
+  "DELANTEROS": {
+    "keys": ["tabla_delanteros"],
+    "percentil": {
+      "Percentil Score Delantero": "DEL_DELANTERO",
+      "Percentil Score 9": "DEL_9",
+      "Percentil Score Segundo Delantero": "DEL_SEGUNDO"
+    },
+    "cmap_cols": {
+      "(DEL_DELANTERO)": ["Blues", true],
+      "(DEL_9)": ["Reds", true],
+      "(DEL_SEGUNDO)": ["Greens", true]
+    }
+  }
+}

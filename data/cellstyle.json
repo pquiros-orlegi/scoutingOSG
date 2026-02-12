@@ -1,0 +1,29 @@
+{
+  "CELLSTYLE_SCORE": {
+    "defaultBackground": "#09202E",
+    "defaultColor": "white",
+    "highlightColors": {
+      "SCORE_JS":"#90EE90",
+      "GK_PORTERO": "rgb(80,90,255)",
+      "GK_ATAJADOR": "rgb(255,50,0)",
+      "GK_PIES": "rgb(50,255,50)",
+      "LAT_GENERICO": "rgb(80,90,255)",
+      "LAT_DEFENSIVO": "rgb(255,50,0)",
+      "LAT_OFENSIVO": "rgb(50,255,50)",
+      "DFC_GENERICO": "rgb(80,90,255)",
+      "DFC_DEFENSIVO": "rgb(255,50,0)",
+      "DFC_COMBINATIVO": "rgb(50,255,50)",
+      "MC_GENERICO": "rgb(80,90,255)",
+      "MC_CONTENCION": "rgb(255,50,0)",
+      "MC_OFENSIVO": "rgb(50,255,50)",
+      "MC_B2B": "rgb(180,90,255)",
+      "EXT_GENERICO": "rgb(80,90,255)",
+      "EXT_WIDEOUT": "rgb(50,255,50)",
+      "EXT_INCORPORACION": "rgb(255,50,0)",
+      "EXT_COMBINATIVO": "rgb(180,90,255)",
+      "DEL_DELANTERO": "rgb(80,90,255)",
+      "DEL_9": "rgb(255,50,0)",
+      "DEL_SEGUNDO": "rgb(50,255,50)"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "PORTERO": {
+    "Portero": "Percentil Score GK Portero",
+    "Atajador": "Percentil Score GK Atajador",
+    "Juego de pies": "Percentil Score GK Juego de Pies"
+  },
+
+  "LATERAL": {
+    "Genérico": "Percentil Score Lateral Genérico",
+    "Defensivo": "Percentil Score Lateral Defensivo",
+    "Ofensivo": "Percentil Score Lateral Ofensivo"
+  },
+
+  "DFC": {
+    "Genérico": "Percentil Score Central Genérico",
+    "Defensivo": "Percentil Score Central Defensivo",
+    "Combinativo": "Percentil Score Central Combinativo"
+  },
+
+  "MC": {
+    "Genérico": "Percentil Score MC Genérico",
+    "Contención": "Percentil Score MC Contención",
+    "Ofensivo": "Percentil Score MC Ofensivo",
+    "Box to Box": "Percentil Score MC Box-to-Box"
+  },
+
+  "EXTREMO": {
+    "Genérico": "Percentil Score Extremo Genérico",
+    "Wide Out": "Percentil Score Extremo Wide Out",
+    "Incorporación": "Percentil Score Extremo Incorporación",
+    "Combinativo": "Percentil Score Extremo Combinativo"
+  },
+
+  "DELANTERO": {
+    "Delantero": "Percentil Score Delantero",
+    "9": "Percentil Score 9",
+    "Segundo delantero": "Percentil Score Segundo Delantero"
+  }
+}
