@@ -199,23 +199,41 @@ st.markdown(
     f"""
     <style>
     :root {{
-        --orlegi-primary: #0b3c7c;
-        --orlegi-primary-hover: #0f4f9c;
-        --orlegi-dark: rgba(4, 18, 46, 0.88);
-        --orlegi-card: rgba(6, 27, 70, 0.95);
-        --orlegi-text: #ffffff;
+        /* === MISMOS COLORES QUE [theme] === */
+        --orlegi-primary: #FFD000;
+        --orlegi-primary-hover: #e6be00;
+
+        --orlegi-bg: #09202E;              /* backgroundColor */
+        --orlegi-surface: #061B29;         /* secondaryBackgroundColor */
+        --orlegi-text: #ffffff;            /* textColor */
+
+        /* Variantes útiles (opacidad) */
+        --orlegi-dark: rgba(9, 32, 46, 0.88);
+        --orlegi-card: rgba(6, 27, 41, 0.95);
     }}
 
     html, body, .stApp {{
         height: 100%;
-        color: var(--orlegi-text);
+        color: var(--orlegi-text) !important;
         font-family: ui-sans-serif, system-ui;
+        background: var(--orlegi-bg) !important;
+    }}
+
+    /* Fuerza fondos Streamlit a tus colores */
+    .stApp {{
+        background-color: var(--orlegi-bg) !important;
+    }}
+    [data-testid="stSidebar"] {{
+        background-color: var(--orlegi-surface) !important;
+    }}
+    main {{
+        background-color: transparent !important;
     }}
 
     header {{
-    background: transparent !important;
-    height: 0 !important;
-    overflow: hidden;
+        background: transparent !important;
+        height: 0 !important;
+        overflow: hidden;
     }}
 
     footer {{
@@ -225,7 +243,7 @@ st.markdown(
     .stDeployButton {{
         display:none
     }}
-    
+
     main.block-container {{
         padding-top: 0 !important;
         position: relative;
@@ -243,19 +261,23 @@ st.markdown(
         margin: auto;
     }}
 
+    /* Botones */
     div.stButton > button:first-child {{
-        background-color: var(--orlegi-primary);
-        color: white;
+        background-color: var(--orlegi-primary) !important;
+        color: #000 !important;
         border-radius: 8px;
-        border: 1px solid var(--orlegi-primary);
+        border: 1px solid var(--orlegi-primary) !important;
+        font-weight: 600;
     }}
 
     div.stButton > button:first-child:hover {{
-        background-color: var(--orlegi-primary-hover);
+        background-color: var(--orlegi-primary-hover) !important;
+        border-color: var(--orlegi-primary-hover) !important;
     }}
 
-    label {{
-        color: white !important;
+    /* Labels y textos */
+    label, .stMarkdown, .stTextInput, .stSelectbox, .stMultiSelect {{
+        color: var(--orlegi-text) !important;
     }}
     </style>
 
@@ -263,6 +285,8 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
+
 
 # =========================
 # BASE DE DATOS (SQLite)
