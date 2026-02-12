@@ -26,35 +26,70 @@ def get_image_base64(path: str) -> str:
 
 fondo_base64 = get_image_base64(FONDO_PATH)
 
+# === COLORES DEL THEME (config.toml) ===
+THEME_BG = "#09202E"
+THEME_SIDEBG = "#061B29"
+THEME_TEXT = "#ffffff"
+THEME_PRIMARY = "#FFD000"
+
 st.markdown(
     f"""
     <style>
+    :root {{
+        --orlegi-primary: {THEME_PRIMARY};
+        --orlegi-bg: {THEME_BG};
+        --orlegi-surface: {THEME_SIDEBG};
+        --orlegi-text: {THEME_TEXT};
+    }}
+
+    /* NO dejar transparente: si lo dejas en transparente, Streamlit no muestra el theme */
     html, body, .stApp {{
         margin: 0;
         padding: 0;
         height: 100%;
         overscroll-behavior: none;
-        background: transparent !important;  /* 👈 que no tape la imagen */
+        background-color: var(--orlegi-bg) !important;
+        color: var(--orlegi-text) !important;
     }}
 
-    /* Contenedor principal del contenido */
+    /* Sidebar y contenedor */
+    [data-testid="stSidebar"] {{
+        background-color: var(--orlegi-surface) !important;
+    }}
+
     .main .block-container {{
         position: relative;
-        z-index: 2;               /* por encima del fondo */
+        z-index: 2;
         background: transparent !important;
     }}
 
+    /* Fondo con imagen, pero SUAVE (si está 0.99 tapa todo) */
     .background-image-rating {{
         position: fixed;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
+        inset: 0;
         background-image: url("data:image/png;base64,{fondo_base64}");
         background-size: cover;
         background-position: center;
-        opacity: 0.99;            /* igual que el login; sube a 0.2 si lo quieres más fuerte */
-        z-index: 0;               /* detrás del contenido, pero visible */
+        opacity: 0.25;  /* 👈 ajusta 0.15–0.35 */
+        z-index: 0;
+        pointer-events: none;
+    }}
+
+    /* Botones: usar el primaryColor */
+    div.stButton > button:first-child {{
+        background-color: var(--orlegi-primary) !important;
+        color: #000 !important;
+        border: 1px solid var(--orlegi-primary) !important;
+        border-radius: 8px;
+        font-weight: 600;
+    }}
+    div.stButton > button:first-child:hover {{
+        filter: brightness(0.95);
+    }}
+
+    /* Inputs y labels */
+    label, .stMarkdown, .stTextInput, .stSelectbox, .stMultiSelect {{
+        color: var(--orlegi-text) !important;
     }}
     </style>
 
@@ -62,6 +97,7 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
 
 # =========================
 # ⚠️ (OPCIONAL) PROTEGER CON LOGIN DE home.py

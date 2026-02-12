@@ -20,18 +20,36 @@ def get_image_base64(path: Path) -> str:
     with open(path, "rb") as f:
         return base64.b64encode(f.read()).decode()
 
+# === COLORES DEL THEME (config.toml) ===
+THEME_BG = "#09202E"
+THEME_SIDEBG = "#061B29"
+THEME_TEXT = "#ffffff"
+THEME_PRIMARY = "#FFD000"
+
 if FONDO_PATH.exists():
     fondo_base64 = get_image_base64(FONDO_PATH)
 
     st.markdown(
         f"""
         <style>
+        :root {{
+            --orlegi-primary: {THEME_PRIMARY};
+            --orlegi-bg: {THEME_BG};
+            --orlegi-surface: {THEME_SIDEBG};
+            --orlegi-text: {THEME_TEXT};
+        }}
+
         html, body, .stApp {{
             margin: 0;
             padding: 0;
             height: 100%;
             overscroll-behavior: none;
-            background: transparent !important;
+            background-color: var(--orlegi-bg) !important;
+            color: var(--orlegi-text) !important;
+        }}
+
+        [data-testid="stSidebar"] {{
+            background-color: var(--orlegi-surface) !important;
         }}
 
         .main .block-container {{
@@ -42,15 +60,22 @@ if FONDO_PATH.exists():
 
         .background-image-rating {{
             position: fixed;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
+            inset: 0;
             background-image: url("data:image/png;base64,{fondo_base64}");
             background-size: cover;
             background-position: center;
-            opacity: 0.99;
+            opacity: 0.25;   /* 👈 importante: 0.99 tapa todo */
             z-index: 0;
+            pointer-events: none;
+        }}
+
+        /* Botones y acentos */
+        div.stButton > button:first-child {{
+            background-color: var(--orlegi-primary) !important;
+            color: #000 !important;
+            border: 1px solid var(--orlegi-primary) !important;
+            border-radius: 8px;
+            font-weight: 600;
         }}
         </style>
 
@@ -60,6 +85,7 @@ if FONDO_PATH.exists():
     )
 else:
     st.warning(f"⚠️ No encuentro el fondo en: {FONDO_PATH}")
+
 
 # =========================
 # LOGIN (si vienes de Inicio/home)
