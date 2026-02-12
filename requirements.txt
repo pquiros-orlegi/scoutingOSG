@@ -1,0 +1,1 @@
+streamlit reportlab==4.2.5 pandas numpy matplotlib
