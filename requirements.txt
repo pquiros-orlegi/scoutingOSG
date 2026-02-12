@@ -1,1 +1,14 @@
-streamlit reportlab==4.2.5 pandas numpy matplotlib
+streamlit>=1.30
+
+pandas>=2.0
+numpy>=1.24
+
+matplotlib>=3.7
+mplsoccer>=1.2
+
+streamlit-aggrid>=0.3.4
+
+pyarrow>=14.0
+PyMuPDF>=1.23
+
+werkzeug>=2.3
